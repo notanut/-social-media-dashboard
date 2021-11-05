@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  /* colors */
+  /* primary */
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%)) ;
+  --youtube: hsl(348, 97%, 39%);
+
+  /* dark theme */
+  --toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+  /* light theme */
+  --toggle-light: hsl(230, 22%, 74%);
+
+  /* neutral */
+  /* dark theme */
+  --background-dark: hsl(230, 17%, 14%);
+  --top-background-dark: hsl(232, 19%, 15%);
+  --card-background-dark: hsl(228, 28%, 20%);
+  --text-dark: hsl(228, 34%, 66%);
+  --text-2-dark: hsl(0, 0%, 100%);
+
+  /* light theme */
+  --background-light: hsl(0, 0%, 100%);
+  --top-background-light: hsl(225, 100%, 98%);
+  --card-background-light: hsl(227, 47%, 96%);
+  --text-light: hsl(228, 12%, 44%);
+  --text-2-light: hsl(230, 17%, 14%);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-light);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-light);
+}
+
+
+p  {
+    font-size: 14px;
+}
+
+h1 {
+    color: var(--text-2-light);
+}
+
+button {
+    border-radius: 50px;
+    border: none;
+    background: var(--toggle-light);
+}
+
+button {
+    width: 50px;
+    height: 25px;
+    transform: translateY(-4px);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--background-light);
+    border-radius: 50%;
+    transform: translate(2px, -10px);
+}
+
+button:hover {
+    background: var(--toggle-dark);
+}
+
+section {
+    margin: 0 auto;
+    /* margin-top: 2.5625rem; */
+    max-width: 69.4375rem;
+    align-items: center;
+}
+
+.header {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.header p {
+    font-weight: 700;
+}
+
+.header-left {
+    flex: 1 1 85%;
+    min-width: 25ch;
+}
+
+.header-right {
+    display: flex;
+    flex: 1 1 10%;
+    min-width: 15ch;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+
+
+.main-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+}
+
+.main-dashboard > * {
+    flex: 1 1 15.953125rem;
+}
+
+.overview-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+}
+
+.overview-dashboard > * {
+    flex: 1 1 15.953125rem;
+}
+
+.main-container,  .overview-container{
+    background: var(--top-background-light);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-container:hover,  
+.overview-container:hover {
+    background-color: var(--card-background-light);
+}
+
+.social-media p {
+    font-weight: 700;
+}
+
+.facebook{
+    border-top: 4px solid var(--facebook);
+}
+
+.twitter {
+    border-top: 4px solid var(--twitter);
+}
+
+.instagram {
+    background: linear-gradient(var(--top-background-light), var(--top-background-light)) padding-box, var(--instagram) border-box;
+    border: 0px solid transparent;
+    border-top: 4px solid transparent;
+}
+
+.instagram:hover {
+    background: linear-gradient(var(--card-background-light), var(--card-background-light)) padding-box, var(--instagram) border-box;
+    border: 0px solid transparent;
+    border-top: 4px solid transparent;
+}
+
+.youtube {
+    border-top: 4px solid var(--youtube);
+}
+
+.followers {
+    margin-top: 30px;
+    margin-bottom: 1rem;
+}
+
+.followers h1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+}
+
+.followers p {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.main-container .text {
+    text-align: center;
+    padding-top: 38px;
+    padding-bottom: 26.25px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+}
+
+.increase {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.increase img {
+    max-width: 100%;
+    height: 100%;
+    transform: translateY(7px);
+}
+
+.overview-title {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.overview-container .text {
+    padding: 1.5rem 1.875rem;
+}
+
+.overview-container .first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first h3 {
+    font-size: 14px;
+}
+
+.second h1 {
+    font-size: 30px;
+}
+
+.overview-container .second {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.percentage {
+    display: flex;
+    transform: translateY(8px);
+}
+
+.percentage img {
+    object-fit: contain;
+    transform: translateY(-9px);
+    margin-right: 4px;
+}
+
+.increase p,
+.percentage p {
+    color: var(--lime-green);
+    font-weight: 700;
+}
+
+.youtube .increase p,
+.decrease p {
+    color: var(--bright-red);
+}
+
+.dark-theme {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.dark-theme h1 {
+    color: var(--text-2-dark);
+}
+
+.dark-theme .main-container, 
+.dark-theme .overview-container {
+    background-color: var(--top-background-dark);
+} 
+
+.dark-theme .main-container:hover, 
+.dark-theme .overview-container:hover {
+    background-color: var(--card-background-dark);
+} 
+
+.dark-theme .instagram {
+    background: linear-gradient(var(--top-background-dark), var(--top-background-dark)) padding-box, var(--instagram) border-box;
+}
+
+.dark-theme .instagram:hover {
+    background: linear-gradient(var(--card-background-dark), var(--card-background-dark)) padding-box, var(--instagram) border-box;
+}
+
+.dark-theme button {
+    background: var(--toggle-dark);
+}
+
+.dark-theme button::after {
+    background: var(--background-dark);
+    transform: translate(-22px, -10px);
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    button {
+        transform: translateY(-7px);
+    }
+}
+
+@media screen and (max-width: 1046px) {
+    .header-right {
+        margin-top: 13px;
+        border-top: 1px solid var(--toggle-light);
+    }
+
+    .dark-theme .header-right {
+        border-top: 1px solid var(--text-dark);
+    }
+}
